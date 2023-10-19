@@ -33,11 +33,10 @@ const AvailableMeals = () => {
       setIsLoading(false);
     };
 
-    fetchMeals()
-      .catch((error) => {
-        setHttpError(error.message);
-        setIsLoading(false);
-      });
+    fetchMeals().catch((error) => {
+      setHttpError(error.message);
+      setIsLoading(false);
+    });
   }, []);
 
   if (isLoading) {
